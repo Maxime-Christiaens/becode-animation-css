@@ -1,0 +1,77 @@
+@mixin bouton1($bg-color,$color){
+	background-color: $bg-color;
+	padding: 0.75em 2.2em;
+	font-size: 2em;
+	border: 4px solid white;
+	border-radius: 6px;
+	font-size: 1.2em;
+	color: $color;
+	&:hover{
+		filter: invert(100%);
+		transition: 3s;
+			}
+	}
+
+@mixin bouton2($bg-color,$color){
+	background-color: $bg-color;
+	padding: 0.75em 2.2em;
+	font-size: 2em;
+	border: 4px solid white;
+	border-radius: 6px;
+	font-size: 1.2em;
+	color: $color;
+	&:hover{
+		filter: invert(100%);
+		font-size: 150%;
+		transition: 3s;
+			}
+	}
+
+
+@mixin flex-center($direction){
+	display: flex;
+	flex-direction: $direction;
+	justify-content: center;
+	align-items: center;
+	}
+
+body{
+	background-color: black;
+}
+
+section{@include flex-center(column);}
+
+.bouton1{
+	@include bouton1(black, white);
+	text-decoration:none;
+	p{
+		style: none;
+		}
+}
+
+.bouton2{
+	@include bouton2(red, white);
+	text-decoration:none;
+	p{
+		style: none;
+		}
+}
+
+.bouton3{
+	background-color: blue;
+	padding: 0.75em 2.2em;
+	font-size: 2em;
+	border: 4px solid white;
+	border-radius: 6px;
+	font-size: 1.2em;
+	a{
+	color: white;
+	}
+	&:hover{
+		filter: invert(100%);
+		transform: translateX(100px);
+		transition: 3s;
+		transition-delay: 0.5s;
+	}
+}	
+
