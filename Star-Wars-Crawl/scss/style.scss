@@ -75,12 +75,24 @@ body{
     width: 100%;
     height: 100%;
     position: absolute;
-    .enterGif{
+    
+    .Gif1{
+        width: 100%;
+        height: 100%;
+        img{
+            width: 33%;
+            height: 33%;
+            opacity: 1;
+
+        }
+    }
+}
+    .Gif2{
         width: 100%;
         height: 100%;
         animation-name: gif;
         animation-duration : 60s; 
-        animation-delay: 24s;
+        animation-delay: 52s;
         animation-timing-function: linear;
         animation-iteration-count: 1;
         opacity: 0;

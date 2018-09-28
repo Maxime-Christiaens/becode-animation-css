@@ -84,10 +84,21 @@ section .all .all-text {
 
 section .all .all-text .titles {
   font-size: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1em;
+  color: lightcoral;
+}
+
+section .all .all-text .titles .title2 {
+  padding-top: 0.5em;
+  padding-bottom: 1em;
 }
 
 section .all .all-text .text {
   visibility: hidden;
   position: absolute;
   transform: translateY(100%);
+  padding-right: 1em;
+  padding-top: 1em;
 }

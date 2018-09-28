@@ -42,11 +42,21 @@ section{
             background-color: white;
             .titles{
                 font-size: 2em;
+                padding-left: 1em;
+                padding-right: 1em;
+                padding-top: 1em;
+                color: lightcoral;
+                .title2{
+                    padding-top: 0.5em;
+                    padding-bottom: 1em;
+                }
             }
             .text{
                 visibility: hidden;//on le voit plus
                 position: absolute;//l'enlève du flux
                 transform: translateY(100%);//le bouge en dessus
+                padding-right: 1em;
+                padding-top: 1em;
             }
         }
     }
