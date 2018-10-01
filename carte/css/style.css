@@ -58,20 +58,42 @@ section .all {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 500px;
+  width: 500px;
+  height: 800px;
   background-image: url("../imgs/chatonHD.jpg");
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 300%;
   background-position: center;
   position: relative;
   overflow: hidden;
+  transition: all 0.5s linear;
 }
 
-section .all:hover .all-text .text {
-  visibility: visible;
-  position: static;
+section .all:hover {
+  background-size: 320%;
+  filter: grayscale(30%);
+  transition: all 0.5s linear;
+}
+
+section .all:hover .all-text {
   transform: translateY(0%);
-  transition: 0.5s;
+  transition: all 0.5s linear;
+}
+
+section .all:hover .box_text {
+  visibility: visible;
+  transform: translateY(0%);
+  transition: all 0.5s linear;
+}
+
+section .all .rond {
+  border-radius: 50%;
+  position: absolute;
+  top: 02%;
+  left: 80%;
+  background-color: lightblue;
+  padding: 1em;
+  z-index: 9999;
 }
 
 section .all .all-text {
@@ -80,25 +102,44 @@ section .all .all-text {
   bottom: 0;
   z-index: 9999;
   background-color: white;
+  transform: translateY(50%);
+  transition: all 0.5s linear;
 }
 
-section .all .all-text .titles {
+section .all .titles {
   font-size: 2em;
   padding-left: 1em;
   padding-right: 1em;
-  padding-top: 1em;
+  padding-top: 0.5em;
   color: lightcoral;
 }
 
-section .all .all-text .titles .title2 {
+section .all .titles .title2 {
   padding-top: 0.5em;
   padding-bottom: 1em;
 }
 
-section .all .all-text .text {
+section .all .box_text {
   visibility: hidden;
-  position: absolute;
   transform: translateY(100%);
-  padding-right: 1em;
-  padding-top: 1em;
+  transition: all 0.5s linear;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 3em;
+  text-align: justify;
+}
+
+section .foot {
+  display: flex;
+  width: 500px;
+  background-color: white;
+  padding: 2em 0;
+}
+
+section .foot .time {
+  padding-left: 2em;
+}
+
+section .foot .comments {
+  padding-left: 3em;
 }

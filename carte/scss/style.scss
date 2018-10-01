@@ -11,28 +11,43 @@ section{
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-
     .all{
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
-        width: 400px;
-        height: 500px;
+        width: 500px;
+        height: 800px;
         background-image: url("../imgs/chatonHD.jpg");
-        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: 300%;
+        //background-size: 1280px 700px;
         background-position: center; 
         position: relative;
         overflow: hidden; //tout ce qui est en-dehors de toi n'est pas visible
+        transition: all 0.5s linear;
         &:hover{
+            background-size: 320%;
+            filter: grayscale(30%);
+            transition: all 0.5s linear;
             .all-text{
-                .text{
+                transform: translateY(0%);//le bouge en dessus
+                transition: all 0.5s linear;
+                }
+                .box_text{
                     visibility: visible;
-                    position: static;
                     transform: translateY(0%);
-                    transition: 0.5s;
+                    transition: all 0.5s linear;
                 }
             }
+        .rond{
+            border-radius: 50%;
+            position: absolute;
+            top: 02%;
+            left: 80%;
+            background-color: lightblue;
+            padding : 1em;
+            z-index: 9999;
         }
         .all-text{
             width: 100%;
@@ -40,24 +55,45 @@ section{
             bottom: 0;
             z-index: 9999;
             background-color: white;
+            //transition début
+            transform: translateY(50%);//le bouge en dessus
+            transition: all 0.5s linear;
+             //transition fin
+            }
             .titles{
                 font-size: 2em;
                 padding-left: 1em;
                 padding-right: 1em;
-                padding-top: 1em;
+                padding-top: 0.5em;
                 color: lightcoral;
                 .title2{
                     padding-top: 0.5em;
                     padding-bottom: 1em;
                 }
             }
-            .text{
+            .box_text{
+                //transition début
                 visibility: hidden;//on le voit plus
-                position: absolute;//l'enlève du flux
                 transform: translateY(100%);//le bouge en dessus
-                padding-right: 1em;
-                padding-top: 1em;
+                transition: all 0.5s linear;
+                //transition fin
+                padding-left: 2em;
+                padding-right: 2em;
+                padding-bottom: 3em;
+                text-align: justify;
             }
         }
-    }
+        .foot{
+            display: flex; 
+            width: 500px;
+            background-color: white;
+            padding: 2em 0;
+            .time{
+                padding-left: 2em;
+            }
+            .comments{
+                padding-left: 3em;
+            }
+        }
 }
+
